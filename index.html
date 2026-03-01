@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sai Akhil | Game Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- 🧑 HERO INTRO (FIRST SCREEN) -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <img src="assets/sai.jpg" class="hero-img" alt="Sai Akhil" />
+
+    <h1>Sai Akhil</h1>
+    <h2>Senior Integrations / EDI Engineer</h2>
+
+    <p>
+      IBM Sterling • ITX • Healthcare EDI • Retail 3PL • Cloud Integration<br/>
+      Scroll down to enter my game portfolio.
+    </p>
+
+    <a class="enter-btn" href="#gameWorld">Enter Game ↓</a>
+  </div>
+</section>
+<section class="game-section" id="gameWorld">
+  <header class="topbar">
+    <div class="brand">
+      <div class="title">Sai Akhil — Game Portfolio</div>
+      <div class="subtitle">W/A/S/D move • Mouse aim • Click shoot • Hit targets to open hologram panels</div>
+    </div>
+
+    <div class="hud">
+      <div class="hud-item">HP: <span id="hp">100</span></div>
+      <div class="hud-item">Score: <span id="score">0</span></div>
+      <div class="hud-item">Targets: <span id="targetsLeft">0</span></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <canvas id="game" width="1100" height="620"></canvas>
+
+    <div class="controls">
+      <div class="chip">Move: W A S D</div>
+      <div class="chip">Shoot: Click</div>
+      <div class="chip">Open/Close panel: Esc</div>
+      <div class="chip">Restart: R</div>
+    </div>
+  </main>
+  </section>
+
+  <!-- HOLOGRAM POPUP -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="holo">
+      <div class="holo-top">
+        <div>
+          <div class="holo-title" id="panelTitle">Title</div>
+          <div class="holo-tag" id="panelTag">TAG</div>
+        </div>
+        <button class="close" id="closeBtn" aria-label="Close">✕</button>
+      </div>
+
+      <div class="holo-body" id="panelBody"></div>
+
+      <div class="holo-footer">
+        <button class="btn ghost" id="nextBtn">Next Target</button>
+        <a class="btn" id="emailBtn" href="mailto:hakhil766@gmail.com">Contact Me</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENDING PANEL -->
+  <div class="modal hidden" id="ending">
+    <div class="modal-backdrop"></div>
+    <div class="holo big">
+      <div class="holo-top">
+        <div>
+          <div class="holo-title">🏆 Integration Architect Throne</div>
+          <div class="holo-tag">CLOUD CONTROL ROOM</div>
+        </div>
+        <button class="close" id="endClose" aria-label="Close">✕</button>
+      </div>
+
+      <div class="holo-body">
+        <p class="lead">Mission Complete. You cleared all career targets.</p>
+
+        <div class="dash-grid">
+          <div class="dash-card">
+            <div class="dash-label">Core Stack</div>
+            <div class="dash-value">IBM ITX/ITXA • Sterling • X12 • AS2/SFTP • SQL • AWS</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-label">Specialties</div>
+            <div class="dash-value">Trading Partner Onboarding • Production Support • Validation • Automation</div>
+          </div>
+          <div class="dash-card">
+            <div class="dash-label">Next Move</div>
+            <div class="dash-value">Let’s build stable EDI + APIs + cloud pipelines together.</div>
+          </div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-head">CONTACT TERMINAL</div>
+          <div class="terminal-body">
+            <div><span class="t-muted">Email:</span> <span class="t-strong">hakhil766@gmail.com</span></div>
+            <div><span class="t-muted">Role:</span> <span class="t-strong">Senior Integrations / EDI Engineer</span></div>
+            <div><span class="t-muted">Message:</span> <span class="t-strong">“Ready for interview & hands-on work.”</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="holo-footer">
+        <button class="btn ghost" id="restartBtn">Play Again</button>
+        <a class="btn" href="mailto:hakhil766@gmail.com">Hire / Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
